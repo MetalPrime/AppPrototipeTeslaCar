@@ -15,6 +15,8 @@ public class Logic {
 	public void registerUser(String username,String password,String email) {
 		
 		listUsers.add(new User(username, email, password));
+		
+		
 		for (User user : listUsers) {
 			System.out.println(user.getUsername());
 			System.out.println(user.getEmail());
