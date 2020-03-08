@@ -15,7 +15,7 @@ public class StartScreen {
 		cp5 = new ControlP5(app);
 		for(int i=0; i< bottons.length; i++) {
 			System.out.println(bottons.length);
-			cp5.addBang(bottons[i]).setPosition(app.width/2-75,i+2*100).setSize(150,50);
+			cp5.addBang(bottons[i]).setPosition(app.width/2-75,(i*70)+app.height/2).setSize(150,50);
 		}
 	}
 
