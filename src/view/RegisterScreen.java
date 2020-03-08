@@ -29,7 +29,10 @@ public class RegisterScreen {
 
 	public void paint() {
 		// TODO Auto-generated method stub
+		app.background(150);
 		
+		
+	
 	}
 
 	public void clicked() {
@@ -48,10 +51,7 @@ public class RegisterScreen {
 		}
 	}
 
-	public void pressed() {
-		// TODO Auto-generated method stub
-		
-	}
+
 	
 	
 }

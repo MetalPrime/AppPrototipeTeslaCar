@@ -8,28 +8,59 @@ public class MainScreen extends PApplet {
 		// TODO Auto-generated method stub
 		PApplet.main(MainScreen.class.getName());
 	}
-
+	StartScreen startS;
 	RegisterScreen registerS;
+	private int screens;
 
 	public void settings() {
 		size(360, 640);
 	}
 
 	public void setup() {
-		registerS = new RegisterScreen(this);
-				
+		
+		
+		screens= 0;
+		switch(screens) {
+		case 0:
+			startS = new StartScreen(this);
+			break;
+		case 1:
+			
+			registerS = new RegisterScreen(this);
+			break;
+		}
+		
 	}
 
 	public void draw() {
-		registerS.paint();
+		background(0);
+		switch(screens) {
+		case 0:
+			startS.paint();
+			break;
+		case 1:
+			registerS.paint();
+			break;
+		}
+		
+		
 	}
 
 	public void mouseClicked() {
-		registerS.clicked();
+		switch(screens) {
+		case 0:
+			startS.clicked();
+			break;
+		case 1:
+			registerS.clicked();
+			break;
+		}
+		
+		
 	}
 
 	public void keyPressed() {
-		registerS.pressed();
+		
 	}
 
 }
