@@ -35,8 +35,9 @@ public class RegisterScreen {
 	
 	}
 
-	public void clicked() {
+	public boolean clicked() {
 		// TODO Auto-generated method stub
+		boolean isRegister = false;
 		//Conseguir la sabrosa información
 		if (app.mouseX > app.width/2 && app.mouseX < app.width/2+150 && app.mouseY > app.height*4/5 && app.mouseY < app.height*4/5+50) {
 			username = cp5.get(Textfield.class, "username").getText();
@@ -47,8 +48,11 @@ public class RegisterScreen {
 			//Esto valida que un string sea igual a otro
 			if(password.equals(confirmedPassword)) {
 				registerC.getInfoPage(username,email,password,confirmedPassword);
+				isRegister = true;
 			}
 		}
+		return isRegister;
+	
 	}
 
 

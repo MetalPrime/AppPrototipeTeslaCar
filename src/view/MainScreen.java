@@ -10,6 +10,7 @@ public class MainScreen extends PApplet {
 	}
 	StartScreen startS;
 	RegisterScreen registerS;
+	LogInScreen loginS;
 	private int screens = 0;
 
 	public void settings() {
@@ -29,7 +30,7 @@ public class MainScreen extends PApplet {
 			registerS = new RegisterScreen(this);
 			break;
 		case 2:
-			
+			loginS = new LogInScreen(this);
 			break;
 		}
 		
@@ -46,6 +47,7 @@ public class MainScreen extends PApplet {
 			
 			break;
 		case 2:
+			loginS.paint();
 			break;
 			
 		
@@ -55,7 +57,7 @@ public class MainScreen extends PApplet {
 	}
 
 	public void mouseClicked() {
-		System.out.println(screens);
+		
 		switch(screens) {
 		case 0:
 			if(startS.GetStarted()) {
@@ -70,18 +72,24 @@ public class MainScreen extends PApplet {
 			}
 			break;
 		case 1:
-			registerS.clicked();
+			if(registerS.clicked()) {
+				//screens=2;
+				setup();
+			}
 			
 			break;
 		case 2:
+			if(loginS.SignIn()) {
+				screens=3;
+				setup();
+			}
+			
 			break;
 		}
 		
 		
 	}
 
-	public void keyPressed() {
-		
-	}
+
 
 }
