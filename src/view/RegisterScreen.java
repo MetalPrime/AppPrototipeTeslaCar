@@ -34,6 +34,17 @@ public class RegisterScreen {
 		
 	
 	}
+	
+	public void hideBottons(int display) {
+		// TODO Auto-generated method stub
+	 if(display!=1){
+			cp5.hide();
+		}
+		if(display==1) {
+			cp5.show();
+			
+		} 
+	}
 
 	public boolean clicked() {
 		// TODO Auto-generated method stub
@@ -48,7 +59,7 @@ public class RegisterScreen {
 			//Esto valida que un string sea igual a otro
 			if(password.equals(confirmedPassword)) {
 				registerC.getInfoPage(username,email,password,confirmedPassword);
-				isRegister = true;
+				//isRegister = true;
 			}
 		}
 		return isRegister;

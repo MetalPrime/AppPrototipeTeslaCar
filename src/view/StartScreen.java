@@ -29,12 +29,27 @@ public class StartScreen {
 
 	public void paint() {
 		// TODO Auto-generated method stub
+		
 		app.background(180);
 		app.image (back,0,0);
 		app.image (logo,app.width/5,app.height/10);
 		
 		
+		
 	}
+
+
+	public void hideBottons(int display) {
+		// TODO Auto-generated method stub
+	 if(display!=0){
+			cp5.hide();
+		}
+		if(display==0) {
+			cp5.show();
+			
+		} 
+	}
+
 
 
 	public boolean GetStarted() {

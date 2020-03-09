@@ -30,6 +30,17 @@ public class LogInScreen {
 		app.background(120);
 	}
 	
+	public void hideBottons(int display) {
+		// TODO Auto-generated method stub
+	 if(display!=2){
+			cp5.hide();
+		}
+		if(display==23) {
+			cp5.show();
+			
+		} 
+	}
+	
 	public boolean SignIn() {
 		boolean isLogIn = false;
 		if (app.mouseX > app.width/2 && app.mouseX < app.width/2+150 && app.mouseY > app.height*4/5 && app.mouseY < app.height*4/5+50) {

@@ -7,7 +7,7 @@ public class LogInController {
 	private Logic logic;
 	
 	public LogInController() {
-		logic = new Logic();
+		logic = Logic.getInstance();
 	}
 
 	public void acceptInfo(String email, String password) {
