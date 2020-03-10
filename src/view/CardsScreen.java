@@ -70,9 +70,9 @@ public class CardsScreen {
 	public void paintcards() {
 		for(int i=0; i<numberCards; i++) {
 			app.image(back, 0, i*50+app.height/2,650,50);
-			app.text("Card"+""+i,20,i*50+app.height/2+10);
-			app.text("Card"+""+i,20,i*50+app.height/2+25);
-			app.text("Card"+""+i,20,i*50+app.height/2+40);
+			app.text(titular,20,i*50+app.height/2+10);
+			app.text(numberCount,20,i*50+app.height/2+25);
+			app.text(dateExpiration,20,i*50+app.height/2+40);
 			app.text("Card"+""+i,20,i*50+app.height/2+55);
 		}
 	}

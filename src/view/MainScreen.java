@@ -21,7 +21,7 @@ public class MainScreen extends PApplet {
 
 	public void setup() {
 		
-			screens = 4;
+			screens = 0;
 		
 			startS = new StartScreen(this);
 		
@@ -56,7 +56,8 @@ public class MainScreen extends PApplet {
 			break;
 		
 		}
-		
+		text(mouseX, mouseX, mouseY);
+		text(mouseY, mouseX+10, mouseY+12);
 		hide();
 	}
 	
@@ -96,6 +97,13 @@ public class MainScreen extends PApplet {
 			}
 			break;
 		case 3:
+			if(principalS.logo()) {
+				screens=3;
+			}
+			
+			if(principalS.shop()) {
+				screens=4;
+			}
 			break;
 		case 4:
 			cardsS.clicked();
