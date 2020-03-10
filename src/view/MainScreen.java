@@ -64,6 +64,7 @@ public class MainScreen extends PApplet {
 		startS.hideBottons(screens);
 		registerS.hideBottons(screens);
 		loginS.hideBottons(screens);
+		cardsS.hideBottons(screens);
 	}
 
 	public void mouseClicked() {
@@ -93,7 +94,11 @@ public class MainScreen extends PApplet {
 				screens=3;
 				
 			}
-			
+			break;
+		case 3:
+			break;
+		case 4:
+			cardsS.clicked();
 			break;
 		}
 		
