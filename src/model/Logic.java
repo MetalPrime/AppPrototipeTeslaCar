@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Logic {
 	
 	private  ArrayList<User> listUsers = new ArrayList<User>();
+	private  ArrayList<Cards> listCards = new ArrayList<Cards>();
 	private boolean isRegister = false;
 	private Car[] teslaCars;
 	private static Logic instance = null;
@@ -25,15 +26,13 @@ public class Logic {
 		
 	}
 	
-	
-	
-	
+	// añadir un nuevo usuario
 	public void registerUser(String username,String password,String email) {
 		
 		listUsers.add(new User(username, email, password));
 		System.out.println(listUsers.size());
 	}
-	
+	// verificar si hay algún usuario registrado
 	public void enterUser(String email, String password) {
 		
 	
@@ -53,9 +52,19 @@ public class Logic {
 		
 		
 	}
-	
+	// confirmar el usuario registrado
 	public boolean isUser() {
+
 		return isRegister;
 		
+	}
+	
+	
+	/////////////////////////////////////////////////////
+	
+	
+	//añadir una tarjeta nueva
+	public void registerCard(String titular,int numberCount,int dateExpiration, int CVV) {
+		listCards.add(new Cards(titular, numberCount, dateExpiration, CVV));
 	}
 }

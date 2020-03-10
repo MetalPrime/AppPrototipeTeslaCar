@@ -7,10 +7,13 @@ public class PrincipalScreen {
 
 	private PApplet app;
 	private PImage [] carsSelection ;
+	private int posX,posY;
 	
 	public PrincipalScreen(PApplet app) {
 		carsSelection = new PImage[6];
 		this.app = app;
+		posX = 0;
+		posY = 141;
 		carsSelection[0] = app.loadImage ("./../Taller1Individual/data/Principal/model3.png");
 		carsSelection[1] = app.loadImage ("./../Taller1Individual/data/Principal/models.png");
 		carsSelection[2] = app.loadImage ("./../Taller1Individual/data/Principal/modelx.png");
@@ -20,8 +23,9 @@ public class PrincipalScreen {
 	}
 	
 	public void paint() {
+		app.background(180);
 		for(int i=0; i<carsSelection.length; i++) {
-			app.image(carsSelection[i],0,i*141);
+			app.image(carsSelection[i],posX,i*posY);
 		}
 	}
 	
