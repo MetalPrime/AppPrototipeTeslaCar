@@ -67,4 +67,6 @@ public class Logic {
 	public void registerCard(String titular,int numberCount,int dateExpiration, int CVV) {
 		listCards.add(new Cards(titular, numberCount, dateExpiration, CVV));
 	}
+	
+	
 }
