@@ -1,32 +1,26 @@
 package view;
 
+import controller.CardsController;
 import processing.core.PApplet;
+import processing.core.PImage;
 
 public class CardsScreen {
 	
 	private PApplet app;
-	private float posX, posY;
-	private int size;
+	private CardsController cardsC;
+	private PImage back;
 
 	public  CardsScreen(PApplet app) {
 		this.app = app;
+		back = app.loadImage("./../Taller1Individual/data/Card/backNormal.png");
 		
 	}
 	
 	public void paint() {
 		app.background(0);
-	}
-	
-	public void background() {
+		app.image(back, 0, 0);
 		
 	}
-	
-	public void burgerMenu() {}
-	
-	public void icon() {}
-	
-	public void shop() {}
-	
 	
 	public void clicked() {
 		
