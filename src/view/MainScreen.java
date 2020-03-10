@@ -11,6 +11,7 @@ public class MainScreen extends PApplet {
 	StartScreen startS;
 	RegisterScreen registerS;
 	LogInScreen loginS;
+	PrincipalScreen principalS;
 	private int screens;
 
 	public void settings() {
@@ -28,7 +29,8 @@ public class MainScreen extends PApplet {
 			
 			loginS = new LogInScreen(this);
 			
-		
+			principalS = new PrincipalScreen(this);
+			
 		
 	}
 
@@ -45,7 +47,9 @@ public class MainScreen extends PApplet {
 		case 2:
 			loginS.paint();
 			break;
-			
+		case 3:
+			principalS.paint();
+			break;
 		
 		}
 		
