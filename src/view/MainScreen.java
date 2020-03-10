@@ -21,7 +21,7 @@ public class MainScreen extends PApplet {
 
 	public void setup() {
 		
-			screens = 0;
+			screens = 3;
 		
 			startS = new StartScreen(this);
 		

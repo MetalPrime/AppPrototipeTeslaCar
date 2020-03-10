@@ -11,11 +11,13 @@ public class PrincipalScreen {
 	private int posX,posY;
 	private int posXh;
 	private int posYh;
+	private PImage burgermenu;
 	
 	public PrincipalScreen(PApplet app) {
 		carsSelection = new PImage[6];
 		header = app.loadImage("./../Taller1Individual/data/Principal/Header.png");
 		this.app = app;
+		burgermenu = app.loadImage("./../Taller1Individual/data/Principal/burgermenu.png");
 		posXh = 0;
 		posYh = 0;
 		posX = 0;
@@ -37,7 +39,13 @@ public class PrincipalScreen {
 	}
 	
 	public void burger() {
-		
+		if(app.mouseX > 157 && app.mouseX < 203 &&
+				app.mouseY > 29 && app.mouseY < 69) {
+			isClickinLogo = true;
+			System.out.println(isClickinLogo);
+		} else {
+			isClickinLogo = false;
+		}
 	}
 	
 	public boolean logo() {
