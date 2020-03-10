@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Logic {
 	
 	private  ArrayList<User> listUsers = new ArrayList<User>();
+	private boolean isRegister = false;
 	private Car[] teslaCars;
 	private static Logic instance = null;
 	
@@ -13,6 +14,7 @@ public class Logic {
 		
 	}
 	
+	// mantener la logica usada en las demás clases, como la unics 
 	public static Logic getInstance() {
 		if(instance==null) {
 			instance = new Logic();
@@ -34,17 +36,26 @@ public class Logic {
 	
 	public void enterUser(String email, String password) {
 		
+	
 		System.out.println(listUsers.size());
 	/*	System.out.println("password");
 		System.out.println("===============");*/
-		for (int i= 0; i<listUsers.size();i++) {
-			System.out.println("====0000===0000=====00=");
-		
-			/*if(user.getEmail().equals(email) && user.getPassword().equals(password) ) {
+		for (User user : listUsers) {
+	System.out.println("====0000===0000=====00=");
+			
+			if(user.getEmail().equals(email) && user.getPassword().equals(password) ) {
 				
 				System.out.println("====0000===0000=====00=");
-			} */
-		}
+				isRegister = true;
+			} 
+		} 
+		
+		
+		
+	}
+	
+	public boolean isUser() {
+		return isRegister;
 		
 	}
 }

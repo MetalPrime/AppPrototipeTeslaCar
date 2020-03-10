@@ -18,10 +18,11 @@ public class LogInScreen {
 		
 		cp5 = new ControlP5(app);
 		
+		// inputs
 		for(int i=0; i < inputs.length; i++) {
 			cp5.addTextfield(inputs[i]).setPosition((app.width/2)-100,30+(i*70)).setSize(200, 40);
 		}
-		
+		// botones
 		cp5.addBang("Iniciar Sesión").setPosition(app.width/2, app.height*4/5).setSize(150,50).setColorActive(250).setColorBackground(0);
 		
 	}
@@ -30,12 +31,13 @@ public class LogInScreen {
 		app.background(120);
 	}
 	
+	// metodo ocultar
 	public void hideBottons(int display) {
 		// TODO Auto-generated method stub
 	 if(display!=2){
 			cp5.hide();
 		}
-		if(display==23) {
+		if(display==2) {
 			cp5.show();
 			
 		} 
@@ -50,7 +52,9 @@ public class LogInScreen {
 			
 				loginC.acceptInfo(email, password);
 					
-				
+				if(loginC.isRegister()) {
+					isLogIn = true;
+				}
 			
 		}
 		return isLogIn;

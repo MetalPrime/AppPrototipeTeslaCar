@@ -59,7 +59,7 @@ public class RegisterScreen {
 			//Esto valida que un string sea igual a otro
 			if(password.equals(confirmedPassword)) {
 				registerC.getInfoPage(username,email,password,confirmedPassword);
-				//isRegister = true;
+				isRegister = true;
 			}
 		}
 		return isRegister;

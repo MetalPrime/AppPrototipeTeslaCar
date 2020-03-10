@@ -15,4 +15,10 @@ public class LogInController {
 	
 	}
 	
+	public boolean isRegister() {
+		return logic.isUser();
+		
+		
+	}
+	
 }
