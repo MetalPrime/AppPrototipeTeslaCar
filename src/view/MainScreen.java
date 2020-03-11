@@ -12,6 +12,7 @@ public class MainScreen extends PApplet {
 	RegisterScreen registerS;
 	LogInScreen loginS;
 	PrincipalScreen principalS;
+	ShoppingScreen shoppingS;
 	CardsScreen cardsS;
 	private int screens;
 
@@ -33,6 +34,8 @@ public class MainScreen extends PApplet {
 			principalS = new PrincipalScreen(this);
 			
 			cardsS = new CardsScreen(this);
+			
+			shoppingS = new ShoppingScreen(this);
 	}
 
 	public void draw() {
@@ -52,7 +55,14 @@ public class MainScreen extends PApplet {
 			principalS.paint();
 			break;
 		case 4:
+			shoppingS.paint();
+			break;
+		case 5:
 			cardsS.paint();
+			break;
+		case 6:
+			break;
+		case 7:
 			break;
 		
 		}
@@ -113,6 +123,20 @@ public class MainScreen extends PApplet {
 			principalS.clicked();
 			break;
 		case 4:
+			if(shoppingS.logOut()) {
+				screens=0;
+			}
+			
+			if(shoppingS.logo()) {
+				screens=3;
+			}
+			
+			if(shoppingS.shop()) {
+				screens=4;
+			}
+			shoppingS.clicked();
+			break;
+		case 5:
 			if(cardsS.logOut()) {
 				screens=0;
 			}
