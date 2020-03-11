@@ -97,6 +97,10 @@ public class MainScreen extends PApplet {
 			}
 			break;
 		case 3:
+			if(principalS.logOut()) {
+				screens=0;
+			}
+			
 			if(principalS.logo()) {
 				screens=3;
 			}
@@ -104,6 +108,9 @@ public class MainScreen extends PApplet {
 			if(principalS.shop()) {
 				screens=4;
 			}
+			
+			
+			principalS.clicked();
 			break;
 		case 4:
 			cardsS.clicked();
