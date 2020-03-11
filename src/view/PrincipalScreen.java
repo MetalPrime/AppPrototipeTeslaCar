@@ -80,7 +80,36 @@ public class PrincipalScreen {
 		} else if(app.mouseX>app.width/2 && app.mouseX<app.width && app.mouseY>0 && app.mouseY<app.height && showBurger==true) {
 			showBurger = false;
 		}
+		
+		
+		
+		
 	}
+	
+	public int carSelected() {
+		int carSelected = 0;
+			if(app.mouseX>205 && app.mouseX<345 && app.mouseY>210 && app.mouseY<235) {
+				carSelected = 1;
+			}
+			return carSelected;
+	
+		
+	}
+	
+	public boolean buyCar(int carSelected) {
+		
+		int car = carSelected();
+		car = carSelected;
+		boolean buyCar=false;
+		if(app.mouseX>205 && app.mouseX<345 && app.mouseY>210 && app.mouseY<235) {
+			buyCar=true;
+			carSelected();
+		} else {
+			buyCar=false;
+		}
+		return buyCar;
+		}
+	
 	
 	public boolean profile() {
 		if(showBurger && app.mouseX > 31 && app.mouseX < 97 &&

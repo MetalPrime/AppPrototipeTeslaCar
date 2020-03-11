@@ -33,7 +33,13 @@ public class ProfileScreen {
 		}
 		
 		public void clicked() {
-			
+			if(app.mouseX > 24 && app.mouseX < 62 &&
+					app.mouseY > 29 && app.mouseY < 69) {
+				
+				showBurger=true;
+			} else if(app.mouseX>app.width/2 && app.mouseX<app.width && app.mouseY>0 && app.mouseY<app.height && showBurger==true) {
+				showBurger = false;
+			}
 		}
 		
 		public void burger() {

@@ -27,11 +27,21 @@ public class ShoppingScreen {
 		app.background(0);
 		app.image(back, 0, 0);
 		app.image(header, posXh, posYh);
+		app.text("Current Cart", app.width/2-50,150);
+		app.stroke(255,0,0);
+		app.strokeWeight(3);
+		app.line(app.width/2-50, 160, app.width/2+50, 160);
 		burger();
 	}
 	
 	public void clicked() {
-		
+		if(app.mouseX > 24 && app.mouseX < 62 &&
+				app.mouseY > 29 && app.mouseY < 69) {
+			
+			showBurger=true;
+		} else if(app.mouseX>app.width/2 && app.mouseX<app.width && app.mouseY>0 && app.mouseY<app.height && showBurger==true) {
+			showBurger = false;
+		}
 	}
 	
 	public void burger() {

@@ -128,6 +128,11 @@ public class MainScreen extends PApplet {
 				screens=4;
 			}
 			
+			if(principalS.buyCar(principalS.carSelected())) {
+				screens=4;
+	
+			}
+			
 			if(principalS.cards()) {
 				screens=5;
 			}

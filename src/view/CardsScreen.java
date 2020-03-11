@@ -53,10 +53,10 @@ public class CardsScreen {
 	
 	public void hideBottons(int display) {
 		// TODO Auto-generated method stub
-	 if(display!=4){
+	 if(display!=5){
 			cp5.hide();
 		}
-		if(display==4) {
+		if(display==5) {
 			cp5.show();
 			
 		} 
@@ -84,6 +84,8 @@ public class CardsScreen {
 			showBurger = false;
 		}
 	}
+	
+
 	
 	public void paintcards() {
 		for(int i=0; i<numberCards; i++) {
