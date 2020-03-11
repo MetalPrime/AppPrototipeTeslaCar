@@ -82,6 +82,40 @@ public class PrincipalScreen {
 		}
 	}
 	
+	public boolean profile() {
+		if(showBurger && app.mouseX > 31 && app.mouseX < 97 &&
+				app.mouseY > 265 && app.mouseY < 285 ) {
+			return true;
+		} else {
+			return false;
+		}
+				
+	}
+	
+	public boolean cards() {
+		if(showBurger && app.mouseX > 31 && app.mouseX < 153 &&
+				app.mouseY > 322 && app.mouseY < 339 ) {
+			return true;
+		} else {
+			return false;
+		}
+		
+		
+	}
+	
+	public boolean directions() {
+		if(showBurger && app.mouseX > 31 && app.mouseX < 125 &&
+				app.mouseY > 385 && app.mouseY < 405 ) {
+			return true;
+		} else {
+			return false;
+		}
+		
+		
+	}
+	
+
+	
 	public boolean logOut() {
 		if(showBurger && app.mouseX > 65 && app.mouseX < 170 &&
 				app.mouseY > 590 && app.mouseY < 610 ) {
@@ -89,7 +123,6 @@ public class PrincipalScreen {
 		} else {
 			return false;
 		}
-		
 		
 	}
 }

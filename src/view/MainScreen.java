@@ -113,6 +113,17 @@ public class MainScreen extends PApplet {
 			principalS.clicked();
 			break;
 		case 4:
+			if(cardsS.logOut()) {
+				screens=0;
+			}
+			
+			if(cardsS.logo()) {
+				screens=3;
+			}
+			
+			if(cardsS.shop()) {
+				screens=4;
+			}
 			cardsS.clicked();
 			break;
 		}
